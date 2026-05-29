@@ -314,7 +314,7 @@ async function runAutoGames(count) {
   appEl.classList.remove("auto-playing");
   resetGame();
   messageEl.textContent = `Finished ${count} automatic games. Stats updated above.`;
-  autoPlayBtn.textContent = "Play 100 games automatically";
+  autoPlayBtn.textContent = "Play 100 games automatically, randomly switching or staying cups.";
   setInteractiveEnabled(true);
 }
 
