@@ -8,7 +8,7 @@ _Coded with AI assistance from Cursor._
 
 ## How to play
 
-1. Open `index.html` in your browser (or run a local server).
+1. Open `index.html` in your browser _(or run a local server)_.
 2. Pick one of three cups.
 3. The host removes an empty cup.
 4. Choose to **stay** with your original cup or **switch** to the other remaining cup.
@@ -17,7 +17,7 @@ _Coded with AI assistance from Cursor._
 ## Run locally
 
 ```bash
-# From this directory
+# from this directory
 python3 -m http.server 8888
 ```
 
