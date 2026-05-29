@@ -88,6 +88,19 @@ body {
   letter-spacing: -0.02em;
 }
 
+.header h1 .title-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #475569;
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.header h1 .title-link:hover {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
+
 .subtitle {
   margin: 0;
   color: var(--muted);
