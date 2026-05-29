@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monty Hall Problem Simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside id="stats" class="stats" aria-label="Session statistics">
+        <div class="stats-item">
+          <span class="stats-value" id="stats-score">0 / 0</span>
+          <span class="stats-label">Correct</span>
+        </div>
+        <div class="stats-divider" aria-hidden="true"></div>
+        <div class="stats-item">
+          <span class="stats-value" id="stats-percent">—</span>
+          <span class="stats-label">Accuracy</span>
+        </div>
+        <div class="stats-divider" aria-hidden="true"></div>
+        <div class="stats-item">
+          <span class="stats-value" id="stats-stay-percent">—</span>
+          <span class="stats-label" id="stats-stay-label">Stay accuracy</span>
+        </div>
+        <div class="stats-divider" aria-hidden="true"></div>
+        <div class="stats-item">
+          <span class="stats-value" id="stats-switch-percent">—</span>
+          <span class="stats-label" id="stats-switch-label">Switch accuracy</span>
+        </div>
+      </aside>
+
+      <header class="header">
+        <h1>Monty Hall Problem Simulation</h1>
+        <p class="subtitle">Pick a cup. The host will remove an empty one. Then decide: switch cups or stay with your original choice?</p>
+      </header>
+
+      <p id="message" class="message" role="status" aria-live="polite">
+        The ball is hidden under one of three cups at random. Which cup do you choose?
+      </p>
+
+      <section class="stage" aria-label="Three cups">
+        <button type="button" class="cup" data-index="0" aria-label="Cup 1">
+          <span class="cup-body"></span>
+          <span class="cup-reveal" aria-hidden="true"></span>
+          <span class="cup-label">1</span>
+        </button>
+        <button type="button" class="cup" data-index="1" aria-label="Cup 2">
+          <span class="cup-body"></span>
+          <span class="cup-reveal" aria-hidden="true"></span>
+          <span class="cup-label">2</span>
+        </button>
+        <button type="button" class="cup" data-index="2" aria-label="Cup 3">
+          <span class="cup-body"></span>
+          <span class="cup-reveal" aria-hidden="true"></span>
+          <span class="cup-label">3</span>
+        </button>
+      </section>
+
+      <div id="actions" class="actions hidden">
+        <div class="action-buttons">
+          <button type="button" id="stay-btn" class="btn btn-choice">Stay with my cup</button>
+          <button type="button" id="switch-btn" class="btn btn-choice">Switch cups</button>
+        </div>
+      </div>
+
+      <div id="result" class="result hidden" role="status" aria-live="polite"></div>
+
+      <button type="button" id="play-again-btn" class="btn btn-ghost hidden">Play again</button>
+
+      <footer class="footer-actions">
+        <button type="button" id="auto-play-btn" class="btn btn-simulate">
+          Play 100 games automatically, randomly switching or staying
+        </button>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
